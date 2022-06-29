@@ -4,21 +4,14 @@ import AccordionBody from "./AccordionBody/AccordionBody";
 
 type AccordionPropsType = {
     titleValue: string
-    collapsed: boolean
+    open: boolean
 }
 
 function Accordion(props: AccordionPropsType) {
-
-    if (props.collapsed) {
-        return <div>
-            <AccordionTitle title={props.titleValue}/>
-            <AccordionBody/>
-        </div>
-    }
-
     return <div>
-            <AccordionTitle title={props.titleValue}/>
-        </div>
+        <AccordionTitle title={props.titleValue}/>
+        { props.open && <AccordionBody/>}
+    </div>
 
 
 }
