@@ -2,22 +2,19 @@ import classes from './OnOff.module.css'
 
 
 type OnOffTypeProps = {
-    value:boolean
+    value: boolean
 }
 
-function OnOff (props:OnOffTypeProps){
+function OnOff(props: OnOffTypeProps) {
 
 
 
 
-    return(
+    return (
         <div className={classes.content}>
-            {props.value && <div className={classes.activOn}>On</div>}
-            {!props.value && <div className={classes.on}>On</div>}
-            {!props.value && <div className={classes.activOff}>Off</div>}
-            {props.value && <div className={classes.off}>Off</div>}
-            {props.value && <div className={classes.activeSignal}></div>}
-            {!props.value && <div className={classes.signal}></div>}
+            {<div className = {(props.value) ? classes.activOn: classes.on}>On</div>}
+            {<div className = {(props.value) ? classes.off : classes.activOff}>Off</div>}
+            {<div className = {(props.value) ? classes.activeSignal: classes.signal}></div>}
         </div>
     )
 }
