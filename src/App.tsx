@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.css';
-import Accordion from "./components/Accordion/Accordion";
-import {Rating} from "./components/Rating/Rating";
+// import Accordion from "./components/Accordion/Accordion";
+// import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
+import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledStar} from "./components/UncontrolledRating/UncontrolledStar/UncontrolledStar";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 
 type PageTitlePropsType = {
     title: string
@@ -32,6 +35,10 @@ function App() {
             <div>
                 <OnOff/>
             </div>
+            <div>
+               <UncontrolledAccordion titleValue={'Menu'}/>
+            </div>
+            <div><UncontrolledRating/></div>
         </div>
 
     );
