@@ -1,24 +1,30 @@
-import React, {useState} from "react";
+import React from "react";
 
 
-type StarPropsType = {}
+type StarPropsType = {
+    selected: boolean
+    changeRating: () => void
+}
+let styleStarOn = {
+    fontWeight: 700,
+    cursor: "pointer"
+}
+let styleStarOff = {
+    cursor: "pointer"
+}
+
+
 
 
 export function UncontrolledStar(props: StarPropsType) {
-
-    let styleStarOn = {
-        fontWeight: 700,
-        cursor: "pointer"
-    }
-    let styleStarOff = {
-        cursor: "pointer"
+    let onClickHandler = () => {
+        props.changeRating()
     }
 
-    let [filterStar, setFilterStar] = useState(false)
 
-    const onClickHandler = () => {
-        setFilterStar(!filterStar)
-    }
 
-    return <span onClick={() => onClickHandler()} style={filterStar ? styleStarOn : styleStarOff}>STAR </span>
+    return <span onClick={onClickHandler} style={props.selected ? styleStarOn : styleStarOff}>STAR </span>
 }
+
+
+
