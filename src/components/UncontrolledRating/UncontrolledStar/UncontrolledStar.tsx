@@ -3,7 +3,8 @@ import React from "react";
 
 type StarPropsType = {
     selected: boolean
-    changeRating: () => void
+    setValue: (value: 1 | 2 | 3 | 4 | 5) => void
+    value: 1 | 2 | 3 | 4 | 5
 }
 let styleStarOn = {
     fontWeight: 700,
@@ -14,16 +15,13 @@ let styleStarOff = {
 }
 
 
-
-
-export function UncontrolledStar(props: StarPropsType) {
+export const UncontrolledStar: React.FC<StarPropsType> = ({setValue, value,selected}) => {
     let onClickHandler = () => {
-        props.changeRating()
+        setValue(value)
     }
 
 
-
-    return <span onClick={onClickHandler} style={props.selected ? styleStarOn : styleStarOff}>STAR </span>
+    return <span onClick={onClickHandler} style={selected ? styleStarOn : styleStarOff}>STAR </span>
 }
 
 
