@@ -1,18 +1,15 @@
-import classes from './OnOff.module.css'
-import React, {useState} from "react";
+import classes from './UncontrolledOnOff.module.css'
+import {useState} from "react";
+
+type FilterTypeOnOff = true | false
 
 
-type OnOffTypeProps = {
-    filter:boolean
-    setFilter:(el:boolean) => void
-}
-
-const  OnOff:React.FC<OnOffTypeProps> = ({filter,setFilter}) =>  {
+function UncontrolledOnOff() {
+   let [filter,setFilter] = useState<FilterTypeOnOff>(false)
 
 
-
- const onClickHandler = (b:boolean) => {
-     setFilter(b)
+ const onClickHandler = (str:FilterTypeOnOff) => {
+     setFilter(str)
  }
 
 
@@ -25,4 +22,4 @@ const  OnOff:React.FC<OnOffTypeProps> = ({filter,setFilter}) =>  {
     )
 }
 
-export default OnOff
+export default UncontrolledOnOff

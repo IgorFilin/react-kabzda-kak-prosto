@@ -1,0 +1,72 @@
+.content {
+    margin-top: 100px;
+}
+
+.on {
+    border: 2px black;
+    border-style: solid;
+    display: inline-block;
+    padding: 40px;
+    width: 100px;
+    text-align: center;
+}
+
+.off {
+    border: 2px black;
+    border-style: solid;
+    border-left: 0px;
+    display: inline-block;
+    width: 100px;
+    padding: 40px;
+    text-align: center;
+}
+
+.signal {
+    background-color: red;
+    position: absolute;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 2px black;
+    border-style: solid;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+
+.activOn {
+    background-color: gold;
+    border: 2px black;
+    border-style: solid;
+    display: inline-block;
+    width: 100px;
+    padding: 40px;
+    text-align: center;
+
+}
+
+.activOff {
+
+    background-color: red;
+    border: 2px black;
+    border-left: 0px;
+    border-style: solid;
+    display: inline-block;
+    width: 100px;
+    padding: 40px;
+    text-align: center;
+
+}
+
+.activeSignal {
+    background-color: gold;
+    position: absolute;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 2px black;
+    border-style: solid;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 35px;
+}

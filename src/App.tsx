@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import classes from './App.module.css';
-import OnOff from "./components/OnOff/OnOff";
+import OnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import Accordion from "./components/Accordion/Accordion";
@@ -9,13 +9,15 @@ import {Rating} from "./components/Rating/Rating";
 type PageTitlePropsType = {
     title: string
 }
+
 export type RatingType = 0 | 1 | 2 | 3 | 4 | 5
 
 function App() {
 
     const [rating, setRating] = useState<RatingType>(0)
     const [accordion,setAccordion] = useState<boolean>(false)
-    console.log(accordion)
+    const [filter,setFilter] = useState<true | false>(false)
+
 
 
     return (
@@ -41,6 +43,7 @@ function App() {
             {/*</div>*/}
             {/*<div><UncontrolledRating/></div>*/}
             <Accordion titleValue={'TITLE'} open={accordion} setAccordion={setAccordion}/>
+            <OnOff filter={filter} setFilter={setFilter}/>
         </div>
 
     );
