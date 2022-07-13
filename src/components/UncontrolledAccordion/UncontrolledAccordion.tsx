@@ -16,7 +16,7 @@ function UncontrolledAccordion(props: AccordionPropsType) {
 
 
     return <div>
-        <UncontrolledAccordionTitle title={props.titleValue} callback={() => ToggleAccordion()}/>
+        <UncontrolledAccordionTitle title={props.titleValue} callback={ToggleAccordion}/>
         {filter && <UncontrolledAccordionBody/>}
     </div>
 
