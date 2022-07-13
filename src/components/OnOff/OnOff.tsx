@@ -1,26 +1,27 @@
 import classes from './OnOff.module.css'
-import React, {useState} from "react";
+import React from "react";
 
 
 type OnOffTypeProps = {
-    filter:boolean
-    setFilter:(el:boolean) => void
+    filtered: boolean
+    setFiltered: (b: boolean) => void
 }
 
-const  OnOff:React.FC<OnOffTypeProps> = ({filter,setFilter}) =>  {
+function OnOff(props: OnOffTypeProps) {
 
 
-
- const onClickHandler = (b:boolean) => {
-     setFilter(b)
- }
+    const onClickHandler = (b: boolean) => {
+        props.setFiltered(b)
+    }
 
 
     return (
         <div className={classes.content}>
-            {<div onClick={() => onClickHandler(true)}  className = {(filter) ? classes.activOn: classes.on}>On</div>}
-            {<div onClick={() => onClickHandler(false)} className = {(filter) ? classes.off : classes.activOff}>Off</div>}
-            {<div className = {(filter) ? classes.activeSignal: classes.signal}></div>}
+            {<div onClick={() => onClickHandler(true)}
+                  className={(props.filtered) ? classes.activOn : classes.on}>On</div>}
+            {<div onClick={() => onClickHandler(false)}
+                  className={(props.filtered) ? classes.off : classes.activOff}>Off</div>}
+            {<div className={(props.filtered) ? classes.activeSignal : classes.signal}></div>}
         </div>
     )
 }
