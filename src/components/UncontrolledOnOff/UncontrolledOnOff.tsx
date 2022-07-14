@@ -1,22 +1,31 @@
 import classes from './UncontrolledOnOff.module.css'
-import {useState} from "react";
+import React, {useState} from "react";
 
 type FilterTypeOnOff = true | false
 
+type UncontrolledOnOffTypeProps = {
+    onChange:(b:boolean)=> void
+}
 
-function UncontrolledOnOff() {
+export const UncontrolledOnOff:React.FC<UncontrolledOnOffTypeProps> = ({onChange}) =>  {
    let [filter,setFilter] = useState<FilterTypeOnOff>(false)
 
 
- const onClickHandler = (str:FilterTypeOnOff) => {
-     setFilter(str)
+ const onClickHandlerOn = () => {
+     setFilter(true)
+     onChange(true)
+
  }
+    const onClickHandlerOff = () => {
+        setFilter(false)
+        onChange(false)
+    }
 
 
     return (
         <div className={classes.content}>
-            {<div onClick={() => onClickHandler(true)}  className = {(filter) ? classes.activOn: classes.on}>On</div>}
-            {<div onClick={() => onClickHandler(false)} className = {(filter) ? classes.off : classes.activOff}>Off</div>}
+            {<div onClick={onClickHandlerOn}  className = {(filter) ? classes.activOn: classes.on}>On</div>}
+            {<div onClick={onClickHandlerOff} className = {(filter) ? classes.off : classes.activOff}>Off</div>}
             {<div className = {(filter) ? classes.activeSignal: classes.signal}></div>}
         </div>
     )

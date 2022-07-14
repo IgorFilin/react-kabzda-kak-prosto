@@ -1,17 +1,18 @@
 import React from "react";
+import accordion from "../Accordion";
 
 
 type AccordionTitlePropsTitle = {
     title: string
-    setAccordion:(b:boolean)=> void
-    open:boolean
+    setAccordion:()=> void
+
 }
 
-const  AccordionTitle:React.FC<AccordionTitlePropsTitle>  = ({title,setAccordion,open}) =>  {
+const  AccordionTitle:React.FC<AccordionTitlePropsTitle>  = ({title,setAccordion}) =>  {
 
   const  onClickAccordionHandler = () => {
 
-      setAccordion(!open)
+      setAccordion()
 
     }
 

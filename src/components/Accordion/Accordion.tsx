@@ -4,14 +4,14 @@ import AccordionBody from "./AccordionBody/AccordionBody";
 
 type AccordionPropsType = {
     titleValue: string
-    open: boolean
-    setAccordion:(b:boolean)=> void
+    accordion: boolean
+    setAccordion: () => void
 }
 
-function Accordion(props: AccordionPropsType) {
+export const Accordion:React.FC<AccordionPropsType> = ({titleValue,accordion,setAccordion}) =>  {
     return <div>
-        <AccordionTitle title={props.titleValue} open={props.open} setAccordion={props.setAccordion}/>
-        { props.open && <AccordionBody/>}
+        <AccordionTitle title={titleValue} setAccordion={setAccordion}/>
+        {accordion && <AccordionBody/>}
     </div>
 
 

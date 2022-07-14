@@ -6,8 +6,8 @@
     border: 2px black;
     border-style: solid;
     display: inline-block;
-    padding: 40px;
-    width: 100px;
+    padding: 20px;
+    width: 50px;
     text-align: center;
 }
 
@@ -16,8 +16,8 @@
     border-style: solid;
     border-left: 0px;
     display: inline-block;
-    width: 100px;
-    padding: 40px;
+    width: 50px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -39,8 +39,8 @@
     border: 2px black;
     border-style: solid;
     display: inline-block;
-    width: 100px;
-    padding: 40px;
+    width: 50px;
+    padding: 20px;
     text-align: center;
 
 }
@@ -52,8 +52,8 @@
     border-left: 0px;
     border-style: solid;
     display: inline-block;
-    width: 100px;
-    padding: 40px;
+    width: 50px;
+    padding: 20px;
     text-align: center;
 
 }

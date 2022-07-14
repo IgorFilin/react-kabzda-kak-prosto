@@ -5,6 +5,7 @@ import UncontrolledAccordion from "./components/UncontrolledAccordion/Uncontroll
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
+import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 type PageTitlePropsType = {
     title: string
@@ -18,7 +19,7 @@ function App() {
     const [rating, setRating] = useState<RatingType>(0)
     const [accordion,setAccordion] = useState<boolean>(false)
     const [filtered,setFiltered] = useState(false)
-    console.log(filtered)
+
 
 
     return (
@@ -28,8 +29,8 @@ function App() {
             </div>
             Article 1
             <div>
-                <Accordion titleValue={'Menu'} open={true} setAccordion={setAccordion}/>
-                <Accordion titleValue={'Friends'} open={false} setAccordion={setAccordion}/>
+                <Accordion titleValue={'Menu'} setAccordion={()=> setAccordion(!accordion)} accordion={accordion}/>
+                <Accordion titleValue={'Friends'}  setAccordion={()=> setAccordion(!accordion)} accordion={accordion}/>
             </div>
             Article 2
             <div>
@@ -41,8 +42,9 @@ function App() {
                 <UncontrolledAccordion titleValue={'Menu'}/>
             </div>
             <div><UncontrolledRating/></div>
-            <Accordion titleValue={'TITLE'} open={accordion} setAccordion={setAccordion}/>
+            <Accordion titleValue={'TITLE'}  setAccordion={()=> setAccordion(!accordion)} accordion={accordion}/>
             <OnOff filtered={filtered} setFiltered={setFiltered} />
+            <UncontrolledOnOff onChange={setFiltered}/>{filtered.toString()}
         </div>
 
     );
