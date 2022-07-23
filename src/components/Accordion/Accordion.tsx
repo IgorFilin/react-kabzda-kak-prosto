@@ -2,9 +2,12 @@ import React from "react";
 import AccordionTitle from './AccordionTitle/AccordionTitle'
 import AccordionBody from "./AccordionBody/AccordionBody";
 
-type AccordionPropsType = {
+export type AccordionPropsType = {
     titleValue: string
     accordion: boolean
+    /**
+     * Function changed accordion on the true or false
+     */
     setAccordion: () => void
 }
 
