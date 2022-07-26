@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useRef, useState} from 'react';
+import React, {useState} from 'react';
 import classes from './App.module.css';
 import OnOff from "./components/OnOff/OnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
@@ -7,6 +7,8 @@ import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {PageTitle} from "./components/PageTitle/PageTitle";
+import {InputControlledValueRef} from "./components/InputControlledValueRef/InputControlledValueRef";
+import {InputControlledValue} from "./components/InputControlledValue/InputControlledValue";
 
 export type TypeFilter = false | true
 
@@ -42,32 +44,3 @@ function App() {
 export default App;
 
 
-export const InputControlledValue = () => {
-    const [value, setValue] = useState('')
-
-    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setValue(e.currentTarget.value)
-    }
-    const onClickHandler = () =>{
-        setValue('')
-    }
-
-    return (<><input value={value} onChange={onChangeHandler}/><button onClick={onClickHandler}>clear</button>value : {value}</>)
-
-}
-export const InputControlledValueRef = () => {
-
-    const [value, setValue] = useState('')
-    const valueInputRef = useRef<HTMLInputElement>(null)
-    const onClickHandler = () => {
-       let el = valueInputRef.current as HTMLInputElement
-        setValue(el.value)
-
-    }
-
-
-    return (<><input ref={valueInputRef}/>
-        <button onClick={onClickHandler}>Add</button>
-        value : {value}</>)
-
-}
