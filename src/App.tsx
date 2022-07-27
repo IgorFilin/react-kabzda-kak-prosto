@@ -9,6 +9,8 @@ import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff"
 import {PageTitle} from "./components/PageTitle/PageTitle";
 import {InputControlledValueRef} from "./components/InputControlledValueRef/InputControlledValueRef";
 import {InputControlledValue} from "./components/InputControlledValue/InputControlledValue";
+import {SelectedUsers} from "./components/SelectedUsers/SelectedUsers";
+import {ControledInputCheckbox} from "./components/ControledInputCheckbox/ControledInputCheckbox";
 
 export type TypeFilter = false | true
 
@@ -35,6 +37,8 @@ function App() {
             <UncontrolledOnOff onChange={setFiltered}/>
             <InputControlledValue/>
             <div><InputControlledValueRef/></div>
+            <div><SelectedUsers/></div>
+            <div><ControledInputCheckbox/></div>
         </div>
 
     );
@@ -42,5 +46,4 @@ function App() {
 
 
 export default App;
-
 
