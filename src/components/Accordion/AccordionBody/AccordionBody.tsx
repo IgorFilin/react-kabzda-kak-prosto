@@ -1,14 +1,20 @@
 import React from "react";
+import {ItemsType} from "../Accordion";
 
-function AccordionBody() {
-    console.log('AccordionBody rendering')
-    return (<div>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
-    </div>)
+export type AccordionBodYType = {
+    items:ItemsType[]
+    callback:(id:string)=>void
+}
+
+function AccordionBody(props:AccordionBodYType) {
+
+    const onClickHandler = (id:string) => {
+        props.callback(id)
+    }
+
+    return (
+        <div>{props.items.map(el=> <li onClick={()=>onClickHandler(el.id)} key={el.id} >{el.title}</li>)}</div>
+    )
 }
 
 export default AccordionBody
