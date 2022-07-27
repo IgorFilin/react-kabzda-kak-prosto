@@ -29,7 +29,7 @@ export const MySelected = (props: MySelectedPropsType) => {
 
     return (
         <div onBlur={notCollapsed} tabIndex={0}  className={s.mySelected}>
-            <div  className={s.title} onClick={Collapsed} >{title}</div>
+            <div  className={s.title} onClick={Collapsed} >{title}<span className={s.wrapper}></span></div>
 
             {collapsed && props.items.map(el => <div onClick={() => onClickItemsHahdler(el.id)} className={title === el.title ? s.itemActive:s.items} key={el.id}>{el.title}</div>)}
         </div>
