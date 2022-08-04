@@ -19,31 +19,3 @@ export default {
 
 const setAccordion = action('Click for collapsed')
 
-
-//👇 We create a “template” of how args map to rendering
-const Template: ComponentStory<typeof Object> = (args) => <Accordion {...args} />;
-
-export const MenuCollapsedMode = Template.bind({});
-
-MenuCollapsedMode.args = {
-    /*👇 The args you need here will depend on your component */
-    titleValue:'Menu',
-    /**
-     * 11111111
-     */
-    accordion:true,
-    setAccordion:setAccordion
-
-};
-
-export const MenuUnCollapsedMode = Template.bind({});
-
-MenuUnCollapsedMode.args = {
-    /*👇 The args you need here will depend on your component */
-    titleValue:'Menu',
-    accordion:false,
-    setAccordion:setAccordion
-
-};
-
-
