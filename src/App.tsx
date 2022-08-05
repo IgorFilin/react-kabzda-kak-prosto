@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import classes from './App.module.css';
 import Accordion from "./components/Accordion/Accordion";
 import {MySelected} from "./components/MySelected/MySelected";
+import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 
 
 export type TypeFilter = false | true
@@ -21,7 +22,9 @@ function App() {
 
     return (
         <div className={classes.content}>
+
             <MySelected value={value} items={items} callback={setValue} />
+            <UncontrolledAccordion titleValue={'Users'}/>
         </div>
 
     );

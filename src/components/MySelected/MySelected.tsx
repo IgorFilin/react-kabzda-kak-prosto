@@ -12,7 +12,7 @@ export const MySelected = (props: MySelectedPropsType) => {
     const [collapsed, setCollapsed] = useState(false)
     const [hoveredElementValue, setHoveredElementValue] = useState(props.value)
     const selectItem = props.items.find(title => props.value === title.id)
-    const hoveredItem = props.items.find(title => title.id === hoveredElementValue)
+    const hoveredItem = props.items.find(title => hoveredElementValue === title.id  )
 
     useEffect(() => {
         setHoveredElementValue(props.value)
