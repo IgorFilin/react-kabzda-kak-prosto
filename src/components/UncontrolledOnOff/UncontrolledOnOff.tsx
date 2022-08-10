@@ -7,15 +7,15 @@ type UncontrolledOnOffTypeProps = {
     onChange:(b:boolean)=> void
 }
 
-export const UncontrolledOnOff:React.FC<UncontrolledOnOffTypeProps> = ({onChange}) =>  {
-   let [filter,setFilter] = useState<FilterTypeOnOff>(false)
+export const UncontrolledOnOff:React.FC<UncontrolledOnOffTypeProps> = React.memo(({onChange}) =>  {
+    let [filter,setFilter] = useState<FilterTypeOnOff>(false)
 
 
- const onClickHandlerOn = () => {
-     setFilter(true)
-     onChange(true)
+    const onClickHandlerOn = () => {
+        setFilter(true)
+        onChange(true)
 
- }
+    }
     const onClickHandlerOff = () => {
         setFilter(false)
         onChange(false)
@@ -29,6 +29,5 @@ export const UncontrolledOnOff:React.FC<UncontrolledOnOffTypeProps> = ({onChange
             {<div className = {(filter) ? classes.activeSignal: classes.signal}></div>}
         </div>
     )
-}
+})
 
-export default UncontrolledOnOff

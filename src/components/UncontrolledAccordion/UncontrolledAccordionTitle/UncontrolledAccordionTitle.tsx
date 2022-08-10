@@ -1,4 +1,4 @@
-
+import React from "react";
 
 
 type AccordionTitlePropsTitle = {
@@ -7,7 +7,7 @@ type AccordionTitlePropsTitle = {
 
 }
 
-function UncontrolledAccordionTitle(props: AccordionTitlePropsTitle) {
+export const  UncontrolledAccordionTitle = React.memo((props: AccordionTitlePropsTitle) => {
 
     let styleMenu = {
         color: 'red',
@@ -20,6 +20,5 @@ function UncontrolledAccordionTitle(props: AccordionTitlePropsTitle) {
     }
 
     return (<div onClick={onClickHandler} style={styleMenu}><h1>{props.title}</h1></div>)
-}
+})
 
-export default UncontrolledAccordionTitle

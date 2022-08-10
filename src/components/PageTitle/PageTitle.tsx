@@ -4,7 +4,8 @@ type PageTitlePropsType = {
     title: string
 }
 
-export function PageTitle(props: PageTitlePropsType) {
+export const PageTitle = React.memo((props: PageTitlePropsType)=> {
 
     return <div><h1>{props.title}</h1></div>
 }
+)

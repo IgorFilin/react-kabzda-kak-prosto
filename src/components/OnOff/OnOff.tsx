@@ -7,7 +7,7 @@ type OnOffTypeProps = {
     setFiltered: (b: boolean) => void
 }
 
-function OnOff(props: OnOffTypeProps) {
+export const OnOff = React.memo((props: OnOffTypeProps) => {
 
 
     const onClickHandler = (b: boolean) => {
@@ -25,5 +25,5 @@ function OnOff(props: OnOffTypeProps) {
         </div>
     )
 }
+)
 
-export default OnOff

@@ -8,7 +8,7 @@ type MySelectedPropsType = {
     callback: (id: string) => void
 }
 
-export const MySelected = (props: MySelectedPropsType) => {
+export const MySelected = React.memo((props: MySelectedPropsType) => {
     const [collapsed, setCollapsed] = useState(false)
     const [hoveredElementValue, setHoveredElementValue] = useState(props.value)
     const selectItem = props.items.find(title => props.value === title.id)
@@ -72,5 +72,5 @@ export const MySelected = (props: MySelectedPropsType) => {
                                                      key={el.id}>{el.title}</div>)}
         </div>
     );
-};
-
+}
+)

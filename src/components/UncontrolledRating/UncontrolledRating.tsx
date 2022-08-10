@@ -1,5 +1,5 @@
 import {UncontrolledStar} from './UncontrolledStar/UncontrolledStar'
-import {useState} from "react";
+import React, {useState} from "react";
 
 
 
@@ -9,7 +9,7 @@ type RatingPropsType = {
 
 
 
-export function UncontrolledRating(props: RatingPropsType) {
+export const UncontrolledRating =React.memo( (props: RatingPropsType)  =>{
 
     let [value,setValue]= useState(0)
 
@@ -22,8 +22,8 @@ export function UncontrolledRating(props: RatingPropsType) {
         <UncontrolledStar selected={value > 2} setValue={setValue} value={3}/>
         <UncontrolledStar selected={value > 3} setValue={setValue} value={4}/>
         <UncontrolledStar selected={value > 4} setValue={setValue} value={5}/>
-        </div>
-}
+    </div>
+})
 
 
 

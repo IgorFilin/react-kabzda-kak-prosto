@@ -10,14 +10,11 @@ export type ItemsType = {
 export type AccordionPropsType = {
     titleValue: string
     accordion: boolean
-    /**
-     * Function changed accordion on the true or false
-     */
     setAccordion: () => void
     items:ItemsType[]
 }
 
-export const Accordion:React.FC<AccordionPropsType> = ({titleValue,accordion,setAccordion,items}) =>  {
+export const Accordion:React.FC<AccordionPropsType> = React.memo(({titleValue,accordion,setAccordion,items}) =>  {
 
     const onClickItem = (id:string) => {
         alert(`User id is ${id}`)
@@ -29,6 +26,6 @@ export const Accordion:React.FC<AccordionPropsType> = ({titleValue,accordion,set
     </div>
 
 
-}
+})
 
 export default Accordion

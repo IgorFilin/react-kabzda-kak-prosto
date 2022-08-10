@@ -8,15 +8,13 @@ type AccordionTitlePropsTitle = {
 
 }
 
-const  AccordionTitle:React.FC<AccordionTitlePropsTitle>  = ({title,setAccordion}) =>  {
+const  AccordionTitle:React.FC<AccordionTitlePropsTitle>  = React.memo(({title,setAccordion}) =>  {
 
-  const  onClickAccordionHandler = () => {
-
-      setAccordion()
-
+    const  onClickAccordionHandler = () => {
+        setAccordion()
     }
 
     return (<div  onClick={onClickAccordionHandler}><h1>{title}</h1></div>)
-}
+})
 
 export default AccordionTitle

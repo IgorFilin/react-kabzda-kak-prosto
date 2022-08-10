@@ -9,12 +9,12 @@ type StarPropsType = {
 }
 
 
-export const Star:React.FC<StarPropsType> = ({selected,setRating,value}) => {
+export const Star:React.FC<StarPropsType> = React.memo( ({selected,setRating,value}) => {
 
     const onClickHandler = () => {
         setRating(value)
     }
 
     return <span onClick={onClickHandler} >{selected ? <b>star </b> : 'star '}</span>
-}
+})
 

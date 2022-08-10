@@ -6,7 +6,7 @@ export type AccordionBodYType = {
     callback:(id:string)=>void
 }
 
-function AccordionBody(props:AccordionBodYType) {
+const  AccordionBody = React.memo((props:AccordionBodYType) => {
 
     const onClickHandler = (id:string) => {
         props.callback(id)
@@ -15,6 +15,6 @@ function AccordionBody(props:AccordionBodYType) {
     return (
         <div>{props.items.map(el=> <li onClick={()=>onClickHandler(el.id)} key={el.id} >{el.title}</li>)}</div>
     )
-}
+})
 
 export default AccordionBody

@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState} from "react";
 
-export const SelectedUsers = () => {
+export const SelectedUsers = React.memo(() => {
     const [value, setValue] = useState<string | undefined>(undefined)
     console.log(value)
 
@@ -18,4 +18,4 @@ export const SelectedUsers = () => {
             <option value={'id5'}>Valera</option>
         </select>
     )
-}
+})
