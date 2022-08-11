@@ -1,9 +1,10 @@
 .mySelected {
-    padding: 10px 30px 10px 30px;
+ width: 100px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #e7fdd8;
-    border-radius: 5px;
-    max-width: 80px;
-
 }
 
 .items {
@@ -39,8 +40,8 @@
 }
 
 .wrapper {
-    overflow: hidden;
-    width: 14rem; /* real length of dropdown */
+    overflow: visible;
+    width: 15rem; /* real length of dropdown */
 }
 
 .wrapper:after {
@@ -48,7 +49,7 @@
     font-size: 0.8rem;
     pointer-events: none; /* ▼ click triggers dropdown */
     position: relative;
-    left: 0.6rem;
-    top: 0rem;
+    left: 150px;
+    bottom: 20px;
     z-index: 1;
 }
