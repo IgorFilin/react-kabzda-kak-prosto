@@ -9,6 +9,7 @@ import {HelpsToReactMemo} from "./components/UseMemoAndReactMemoTraning";
 import {SelectedComponentsUseMemoTrannig} from "./SelectedComponentsUseMemoTrannig";
 import {BooksGroup} from "./components/BooksGroup";
 import UseStateExample from "./components/UseStateExample/UseStateExample";
+import {UseEffectExample} from "./components/UseEffectExample/UseEffectExample";
 
 
 export type TypeFilter = false | true
@@ -26,7 +27,7 @@ function App() {
 
     return (
         <div className={classes.content}>
-           <UseStateExample/>
+           <UseEffectExample/>
         </div>
 
     );
