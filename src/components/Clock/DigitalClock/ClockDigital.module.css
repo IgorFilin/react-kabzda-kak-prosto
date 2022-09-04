@@ -1,0 +1,18 @@
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #46466c;
+}
+.digitalClock {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    color: #ffc600;
+    font-family: "Bauhaus 93";
+    border: 2px solid;
+    border-radius: 20px;
+    font-size: 100px;
+    background-color: #3d5a97;
+}

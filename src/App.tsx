@@ -9,7 +9,6 @@ import {HelpsToReactMemo} from "./components/UseMemoAndReactMemoTraning";
 import {SelectedComponentsUseMemoTrannig} from "./SelectedComponentsUseMemoTrannig";
 import {BooksGroup} from "./components/BooksGroup";
 import UseStateExample from "./components/UseStateExample/UseStateExample";
-import {UseEffectExample} from "./components/UseEffectExample/UseEffectExample";
 import {Clock} from "./components/Clock/Clock";
 
 
@@ -17,12 +16,12 @@ export type TypeFilter = false | true
 
 export type RatingType = 0 | 1 | 2 | 3 | 4 | 5
 
+export type clockModeType = 'ANALOG-CLOCK' | "DIGITAL-CLOCK"
+
 function App() {
-
-
     return (
         <div className={classes.content}>
-            <Clock/>
+            <Clock clockMode='DIGITAL-CLOCK'/>
         </div>
 
     );

@@ -14,13 +14,11 @@
     align-items: center;
     background-image: url("./../../assets/clock.png");
     background-size: cover;
-    background-size: cover;
     border-radius: 50%;
     box-shadow: 0 -15px 15px rgba(134, 134, 134, 0.35),
     inset 0 -15px 15px #191919,
     0 15px 15px rgba(134, 134, 134, 0.35),
     inset 0 15px 15px #191919
-;
 }
 
 .clock:before{
