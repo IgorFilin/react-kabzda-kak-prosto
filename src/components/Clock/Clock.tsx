@@ -9,9 +9,9 @@ export type ClockTypeProps = {
 }
 
 export const Clock = (props:ClockTypeProps) => {
-    const [hour, setHour] = useState("");
-    const [minutes, setMinutes] = useState("");
-    const [seconds, setSeconds] = useState("");
+    const [hour, setHour] = useState("00");
+    const [minutes, setMinutes] = useState("00");
+    const [seconds, setSeconds] = useState("00");
 
     const analogMode = props.clockMode === 'ANALOG-CLOCK'
     const digitalMode = props.clockMode === 'DIGITAL-CLOCK'

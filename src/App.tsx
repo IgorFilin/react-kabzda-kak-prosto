@@ -21,7 +21,7 @@ export type clockModeType = 'ANALOG-CLOCK' | "DIGITAL-CLOCK"
 function App() {
     return (
         <div className={classes.content}>
-            <Clock clockMode='DIGITAL-CLOCK'/>
+            <Clock clockMode='ANALOG-CLOCK'/>
         </div>
 
     );
