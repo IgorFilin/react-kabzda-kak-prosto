@@ -3,9 +3,13 @@ import React, {useEffect, useLayoutEffect, useState} from 'react';
 export const UseEffectExample = React.memo(() => {
     console.log('render UseEffectExample')
     const [date,setData]=useState(new Date())
-    function changeCount(state:number){
-        return state + 1
-    }
+
+
+    // function changeCount(state:number){
+    //     return state + 1
+    // }
+
+
     let hours = date.getHours()
     let minutes = date.getMinutes()
     let seconds = date.getSeconds()
@@ -19,17 +23,17 @@ export const UseEffectExample = React.memo(() => {
     }
     const time = getZero(hours)+':'+getZero(minutes)+':'+getZero(seconds)
 
+   useEffect(()=> {
+       let id = setInterval(()=>{
+           console.log('tic')
+           setData(new Date())
+       },1000)
+       return () => {
+           console.log('clear')
+         clearInterval(id)
+       }
+   },[])
 
-    useEffect(() => {
-        let id = setInterval(()=>{
-            console.log('tic')
-            setData(new Date())
-        },1000)
-        return () => {
-            console.log('clear')
-            clearInterval(id)
-        }
-    },[])
 
 
     return (

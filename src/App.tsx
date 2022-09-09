@@ -3,11 +3,11 @@ import classes from './App.module.css';
 import Accordion from "./components/Accordion/Accordion";
 import {MySelected} from "./components/MySelected/MySelected";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
-import {Example1} from "./components/ReactMemo";
-import {UseMemoTraning} from "./components/UseMemoTraning";
-import {HelpsToReactMemo} from "./components/UseMemoAndReactMemoTraning";
+import {Example1} from "./components/useMemoTraning/ReactMemo";
+import {UseMemoTraning} from "./components/useMemoTraning/UseMemoTraning";
+import {HelpsToReactMemo} from "./components/useMemoTraning/UseMemoAndReactMemoTraning";
 import {SelectedComponentsUseMemoTrannig} from "./SelectedComponentsUseMemoTrannig";
-import {BooksGroup} from "./components/BooksGroup";
+import {BooksGroup} from "./components/useMemoTraning/BooksGroup";
 import UseStateExample from "./components/UseStateExample/UseStateExample";
 import {Clock} from "./components/Clock/Clock";
 

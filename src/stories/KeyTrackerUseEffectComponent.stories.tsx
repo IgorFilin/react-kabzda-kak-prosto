@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {ExampleUseEffectClearFn} from "../components/ExampleUseEffectClearFn";
-import {KeyTrackerUseEffectComponent} from "../components/KeyTrackerUseEffectComponent";
+import {ExampleUseEffectClearFn} from "../components/UseEffectExample/ExampleUseEffectClearFn";
+import {KeyTrackerUseEffectComponent} from "../components/UseEffectExample/KeyTrackerUseEffectComponent";
 
 
 export default {

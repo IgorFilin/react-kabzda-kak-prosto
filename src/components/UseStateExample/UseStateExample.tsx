@@ -1,17 +1,23 @@
-import React, {useMemo, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
+
+
+
 
 const UseStateExample = () => {
     console.log('render UseStateExample')
 
-    function initialResult () {
-        console.log('render initialResult')
+    const  generateDate = () => {
+        console.log('render generateDate')
         return 5
     }
-    // let initialCount = useMemo(initialResult,[])
-    // let initialCount = useCallback(initialResult,[])
-    const [counter,setCounter]= useState(initialResult)// передавая вызов функцию в юз стейт мы перестаем её вызывать при каждом вызове компонента
+    // const initialState = useMemo(generateDate,[])
+// const initialState = generateDate() // передавая инишел стейт в юз стейт так, у нас функция будет вызыватся при каждом рендоре компоненты
+
+
+    const [counter,setCounter]= useState(generateDate)// передавая вызов функцию в юз стейт мы перестаем её вызывать при каждом вызове компонента
 
     const countChanged = (stateCount:number) => {
+        console.log('render countChanged')
         return stateCount + 1
     }
 

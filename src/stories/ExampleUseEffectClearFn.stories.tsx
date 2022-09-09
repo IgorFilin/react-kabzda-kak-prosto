@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {ExampleUseEffectClearFn} from "../components/ExampleUseEffectClearFn";
+import {ExampleUseEffectClearFn} from "../components/UseEffectExample/ExampleUseEffectClearFn";
 
 
 export default {
